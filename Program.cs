@@ -19,9 +19,7 @@ namespace ArkaneSystems.MouseJiggle
 {
     internal static class Program
     {
-        public static bool StartJiggling = false;
-        public static bool ZenJiggling = false;
-        public static bool StartMinimized = false;
+        //public static bool ZenJiggling = true;
 
         /// <summary>
         ///     The main entry point for the application.
@@ -34,23 +32,12 @@ namespace ArkaneSystems.MouseJiggle
             if (instance.WaitOne(0, false))
             {
                 // Check for command-line switches.
-                foreach (string arg in args)
-                {
-                    if ((System.String.Compare (arg.ToUpperInvariant (), "--JIGGLE", System.StringComparison.Ordinal) ==
-                         0) ||
-                        (System.String.Compare (arg.ToUpperInvariant (), "-J", System.StringComparison.Ordinal) == 0))
-                        StartJiggling = true;
-
-                    if ((System.String.Compare (arg.ToUpperInvariant (), "--ZEN", System.StringComparison.Ordinal) == 0) ||
-                        (System.String.Compare (arg.ToUpperInvariant (), "-Z", System.StringComparison.Ordinal) == 0))
-                        ZenJiggling = true;
-
-                    if (
-                        (System.String.Compare (arg.ToUpperInvariant (), "--MINIMIZED", System.StringComparison.Ordinal) ==
-                         0) ||
-                        (System.String.Compare (arg.ToUpperInvariant (), "-M", System.StringComparison.Ordinal) == 0))
-                        StartMinimized = true;
-                }
+                //foreach (string arg in args)
+                //{
+                //    if ((System.String.Compare (arg.ToUpperInvariant (), "--ZEN", System.StringComparison.Ordinal) == 0) ||
+                //        (System.String.Compare (arg.ToUpperInvariant (), "-Z", System.StringComparison.Ordinal) == 0))
+                //        ZenJiggling = true;
+                //}
 
                 Application.EnableVisualStyles ();
                 Application.SetCompatibleTextRenderingDefault (false);
